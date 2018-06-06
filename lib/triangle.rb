@@ -10,7 +10,7 @@ class Triangle
 
   def kind
 
-    if e.any? { |side| side<= 0 or side.nil? } || ((s1+s2)<s3) || ((s2+s3<s1)) || ((s1+s3<s2))
+    if e.any? { |side| side<= 0 or side.nil? } || ((s1+s2)<=s3) || ((s2+s3<=s1)) || ((s1+s3<=s2))
       raise TriangleError
     elsif (s1==s2) && (s2==s3)
       :equilateral
